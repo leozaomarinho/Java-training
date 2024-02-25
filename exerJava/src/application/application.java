@@ -23,6 +23,9 @@ public class application {
 		
 		System.out.print("primeira medida: "+x.a+", segunda medida: "+x.b+", terceira medida: "+x.c);
 
+		System.out.printf("Trianulo x area: %.4f", x.area());
+		
+		input.close();
 	}
 
 }
