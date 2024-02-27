@@ -9,17 +9,18 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		
 		
-		Product produto = new Product();
+		
 	
 			System.out.print("Digite o nome do produto: ");
-			produto.name = input.next();
+			String name = input.next();
 			
 			System.out.print("Digite o valor do produto: ");
-			produto.valor = input.nextDouble();
+			double valor = input.nextDouble();
 			
 			System.out.print("Digite a quantidade do produto: ");
-			produto.quant = input.nextInt();
+			int quant = input.nextInt();
 			
+			Product produto = new Product(name,valor,quant);
 			System.out.println("Produto cadastrado com sucesso");
 			
 			System.out.print(produto.toString());
