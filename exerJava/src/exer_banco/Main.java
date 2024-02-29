@@ -10,8 +10,9 @@ public class Main {
 		
 		//variaveis
 		int option;
-		int numeroConta = (int) (Math.random() * 1000);
-		String nomeTitular
+		String numeroConta;
+		String nomeTitular;
+		
 		
 		System.out.println("-- Bem vindo ao JavaBank --");
 		do {
@@ -24,7 +25,28 @@ public class Main {
 			System.out.print("Digite uma opção valida: ");
 			option = input.nextInt();
 			
+			if(option==0){
+				System.out.println("Você escolheu sair.");
+				System.out.println("Encerrando o Java Bank...");
+			}
 			
+			else if(option==1) {
+				System.out.println("Digite o nome do titular da conta: ");
+				nomeTitular = input.next();
+				int numConta = (int) (Math.random() * 1000);
+				
+				numeroConta= String.valueOf(numConta);
+				System.out.println("Conta criada com sucesso");
+				System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
+			}
+			else if(option==2) {
+				if (numeroConta.isEmpty()) {
+					System.out.println("A conta ainda não foi criada, não é possivel realizar o deposito.");
+				}
+				else{
+					
+				}
+			}
 			
 			
 		}while(option != 0);

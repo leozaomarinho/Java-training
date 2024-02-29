@@ -2,16 +2,16 @@ package exer_banco;
 
 public class Account {
 	
-	public final int numeroConta;
+	public final String numeroConta;
 	public String nomeTitular;
 	private double saldo = 0;
 	
-	public Account(int numeroConta,String nomeTitular) {
+	public Account(String numeroConta,String nomeTitular) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
 	};
 	
-	public Account(int numeroConta,String nomeTitular, double valorDep) {
+	public Account(String numeroConta,String nomeTitular, double valorDep) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
 		this.saldo = valorDep;
