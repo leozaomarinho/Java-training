@@ -4,7 +4,7 @@ public class Account {
 	
 	public final int numeroConta;
 	public String nomeTitular;
-	private double saldoInicial = 0;
+	private double saldo = 0;
 	
 	public Account(int numeroConta,String nomeTitular) {
 		this.numeroConta = numeroConta;
@@ -14,19 +14,19 @@ public class Account {
 	public Account(int numeroConta,String nomeTitular, double valorDep) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
-		this.saldoInicial = valorDep;
+		this.saldo = valorDep;
 	};
 	
 	public void Deposito(double valorDep) {
-		this.saldoInicial += valorDep;
+		this.saldo += valorDep;
 		System.out.println("Deposito realizado com sucesso!");
-		System.out.printf("Seu saldo é de: %.2f", saldoInicial);
+		System.out.printf("Seu saldo é de: %.2f", saldo);
 	}
 	
 	public void Saque(double valorSaque) {
-		this.saldoInicial -=(valorSaque + 5);
+		this.saldo -=(valorSaque + 5);
 		System.out.println("Saque realizado com sucesso!");
-		System.out.printf("Seu saldo é de: %.2f",saldoInicial);
+		System.out.printf("Seu saldo é de: %.2f",saldo);
 	}
 	
 }
