@@ -10,6 +10,7 @@ public class Main {
 		
 		//variaveis
 		int option;
+		double valorDep;
 		String numeroConta;
 		String nomeTitular;
 		
@@ -44,7 +45,8 @@ public class Main {
 					System.out.println("A conta ainda não foi criada, não é possivel realizar o deposito.");
 				}
 				else{
-					
+					System.out.print("Qual será o valor do deposito? ");
+					valorDep = input.nextDouble();
 				}
 			}
 			
