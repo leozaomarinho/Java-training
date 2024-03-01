@@ -13,7 +13,7 @@ public class Main {
 		double valorDep;
 		String numeroConta;
 		String nomeTitular;
-		
+		Account conta;
 		
 		System.out.println("-- Bem vindo ao JavaBank --");
 		do {
@@ -35,10 +35,20 @@ public class Main {
 				System.out.println("Digite o nome do titular da conta: ");
 				nomeTitular = input.next();
 				int numConta = (int) (Math.random() * 1000);
-				
 				numeroConta= String.valueOf(numConta);
-				System.out.println("Conta criada com sucesso");
-				System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
+				System.out.println("Caso nao deseje depositar nenhum valor, digite 0");
+				System.out.print("Digite o valor a ser depositado: ");
+				double valueDep = input.nextDouble();
+				if (valueDep ==0) {
+					Account conta = new Account(numeroConta,nomeTitular);
+					System.out.println("Conta criada com sucesso");
+					System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
+				}
+				else {
+					Account conta = new Account(numeroConta,nomeTitular,valueDep);
+					System.out.println("Conta criada com sucesso");
+					System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta+" e o saldo inicial é de: "+valueDep+);
+				}
 			}
 			else if(option==2) {
 				if (numeroConta.isEmpty()) {
@@ -46,7 +56,7 @@ public class Main {
 				}
 				else{
 					System.out.print("Qual será o valor do deposito? ");
-					valorDep = input.nextDouble();
+					valorDep = input.nextDouble();			
 				}
 			}
 			
