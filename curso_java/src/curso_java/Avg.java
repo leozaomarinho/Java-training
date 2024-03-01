@@ -22,6 +22,8 @@ public class Avg {
 	n3 = input.nextDouble();
 	//Funcao com a logica do programa
 	Aprovacao(nome,n1,n2,n3);
+	
+	input.close();
 	}
 	
 	public static double Aprovacao(String nome ,double nota1,double nota2, double nota3) {	

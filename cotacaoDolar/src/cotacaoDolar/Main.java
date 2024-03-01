@@ -17,6 +17,8 @@ public class Main {
 		
 		CurrencyConverter.BuyDolar(dolarPrice, dolarBuy);
 		
+		input.close();
+		
 
 	}
 
