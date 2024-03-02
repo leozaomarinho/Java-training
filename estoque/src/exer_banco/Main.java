@@ -26,6 +26,8 @@ public class Main {
 			System.out.print("Digite uma opção valida: ");
 			option = input.nextInt();
 			
+			conta = new Account();
+			
 			if(option==0){
 				System.out.println("Você escolheu sair.");
 				System.out.println("Encerrando o Java Bank...");
@@ -40,7 +42,7 @@ public class Main {
 				System.out.print("Digite o valor a ser depositado: ");
 				double valueDep = input.nextDouble();
 				if (valueDep ==0) {
-					conta = new Account(numeroConta,nomeTitular);
+					conta = Account(numeroConta,nomeTitular);
 					System.out.println("Conta criada com sucesso");
 					System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
 				}
@@ -62,8 +64,9 @@ public class Main {
 			else if(option==3){
 				System.out.println("Qual o valor a ser sacado? ");
 				double valueSaque = input.nextDouble();
+				double saldo = conta.getSaldo();
 				
-				if (valueSaque>=conta.saldo && conta.saldo<=0){
+				if (valueSaque>saldo && saldo<=0){
 					System.out.print("O seu saldo ficara negativo, você deseja prosseguir? s/n ");
 					String opcao = input.next();
 					
