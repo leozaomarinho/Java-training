@@ -59,6 +59,25 @@ public class Main {
 					valorDep = input.nextDouble();			
 				}
 			}
+			else if(option==3){
+				System.out.println("Qual o valor a ser sacado? ");
+				double valueSaque = input.nextDouble();
+				
+				if (valueSaque>=conta.saldo && conta.saldo<=0){
+					System.out.print("O seu saldo ficara negativo, você deseja prosseguir? s/n ");
+					String opcao = input.next();
+					
+					if(opcao=="s") {
+						conta.Saque(valueSaque);
+					}
+				}
+				else {
+					conta.Saque(valueSaque);
+				}
+			}
+			else if(option==4){
+				conta.getSaldo();
+			}
 			
 			
 		}while(option != 0);

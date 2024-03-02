@@ -28,5 +28,10 @@ public class Account {
 		System.out.println("Saque realizado com sucesso!");
 		System.out.printf("Seu saldo é de: %.2f",saldo);
 	}
+	public void getSaldo() {
+		System.out.printf("O seu saldo é de: %.2f",this.saldo);
+	}
+	
+	
 	
 }
