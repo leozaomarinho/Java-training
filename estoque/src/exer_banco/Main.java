@@ -18,50 +18,46 @@ public class Main {
 		System.out.println("-- Bem vindo ao JavaBank --");
 		do {
 			System.out.println("O que você deseja fazer? ");
-			System.out.println("1 - Criar conta");
-			System.out.println("2 - Realizar Deposito");
-			System.out.println("3 - Realizar Saque");
-			System.out.println("4 - Ver saldo");
+			System.out.println("1 - Realizar Deposito");
+			System.out.println("2 - Realizar Saque");
+			System.out.println("3 - Ver saldo");
 			System.out.println("0 - Sair");
 			System.out.print("Digite uma opção valida: ");
 			option = input.nextInt();
 			
-			conta = new Account();
 			
+			System.out.println("Digite o nome do titular da conta: ");
+			nomeTitular = input.next();
+			int numConta = (int) (Math.random() * 1000);
+			numeroConta= String.valueOf(numConta);
+			System.out.println("Caso nao deseje depositar nenhum valor, digite 0");
+			System.out.print("Digite o valor a ser depositado: ");
+			double valueDep = input.nextDouble();
+			if (valueDep ==0) {
+				conta =new Account(numeroConta,nomeTitular);
+				System.out.println("Conta criada com sucesso");
+				System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
+			}
+			else {
+				conta = new Account(numeroConta,nomeTitular,valueDep);
+				System.out.println("Conta criada com sucesso");
+				System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta+" e o saldo inicial é de: "+valueDep+"%.n");
+			}
 			if(option==0){
 				System.out.println("Você escolheu sair.");
 				System.out.println("Encerrando o Java Bank...");
 			}
 			
 			else if(option==1) {
-				System.out.println("Digite o nome do titular da conta: ");
-				nomeTitular = input.next();
-				int numConta = (int) (Math.random() * 1000);
-				numeroConta= String.valueOf(numConta);
-				System.out.println("Caso nao deseje depositar nenhum valor, digite 0");
-				System.out.print("Digite o valor a ser depositado: ");
-				double valueDep = input.nextDouble();
-				if (valueDep ==0) {
-					conta = Account(numeroConta,nomeTitular);
-					System.out.println("Conta criada com sucesso");
-					System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta);
-				}
-				else {
-					conta = new Account(numeroConta,nomeTitular,valueDep);
-					System.out.println("Conta criada com sucesso");
-					System.out.printf("Sr(a) "+nomeTitular+" ,o numero da sua conta é: "+numeroConta+" e o saldo inicial é de: "+valueDep);
-				}
-			}
-			else if(option==2) {
 				if (numeroConta.isEmpty()) {
 					System.out.println("A conta ainda não foi criada, não é possivel realizar o deposito.");
 				}
 				else{
-					System.out.print("Qual será o valor do deposito? ");
+					System.out.println("Qual será o valor do deposito? ");
 					valorDep = input.nextDouble();			
 				}
 			}
-			else if(option==3){
+			else if(option==2){
 				System.out.println("Qual o valor a ser sacado? ");
 				double valueSaque = input.nextDouble();
 				double saldo = conta.getSaldo();
@@ -78,7 +74,7 @@ public class Main {
 					conta.Saque(valueSaque);
 				}
 			}
-			else if(option==4){
+			else if(option==3){
 				conta.getSaldo();
 			}
 			
