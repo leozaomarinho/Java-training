@@ -32,7 +32,6 @@ public class Main {
 			option = input.nextInt();
 
 			if (option != 0) {
-
 				if (option == 1) {
 					// Realizar depósito
 					System.out.println("Caso não deseje depositar nenhum valor, digite 0");
@@ -63,9 +62,7 @@ public class Main {
 				System.out.println("Você escolheu sair.");
 				System.out.println("Encerrando o Java Bank...");
 			}
-
 		} while (option != 0);
-
 		input.close();
 	}
 }
