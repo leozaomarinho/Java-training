@@ -10,6 +10,7 @@ public class PrimeiroExe {
 		Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
 
+		double sum =0,avg=0;
 		int n = input.nextInt();
 		double[] vect = new double[n];
 
@@ -20,8 +21,12 @@ public class PrimeiroExe {
 
 		System.out.println("Valores inseridos no vetor: ");
 		for (int i = 0; i <n; i++) {
-			System.out.print(+vect[i] + " ");
+		
+		sum+=vect[i];
 		}
+		avg=sum/n;
+		System.out.printf("A media é: %.2f",avg);
+
 		input.close();
 	}
 
