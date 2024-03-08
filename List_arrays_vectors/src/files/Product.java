@@ -2,9 +2,33 @@ package files;
 
 public class Product {
 
-	public String NomeProd;
-	public double Valor;
-	public int Quant;
+	private String NomeProd;
+	public String getNomeProd() {
+		return NomeProd;
+	}
+
+	public void setNomeProd(String nomeProd) {
+		NomeProd = nomeProd;
+	}
+
+	public double getValor() {
+		return Valor;
+	}
+
+	public void setValor(double valor) {
+		Valor = valor;
+	}
+
+	public int getQuant() {
+		return Quant;
+	}
+
+	public void setQuant(int quant) {
+		Quant = quant;
+	}
+
+	private double Valor;
+	private int Quant;
 	
 	public Product() {
 		
