@@ -3,6 +3,18 @@ package files;
 public class Product {
 
 	private String NomeProd;
+	private double Valor;
+	private int Quant;
+	
+	public Product() {
+		
+	};
+	
+	public Product(String nome,double valor, int quant) {
+		this.NomeProd = nome;
+		this.Valor = valor;
+		this.Quant = quant;
+	}
 	public String getNomeProd() {
 		return NomeProd;
 	}
@@ -16,7 +28,7 @@ public class Product {
 	}
 
 	public void setValor(double valor) {
-		Valor = valor;
+		this.Valor = valor;
 	}
 
 	public int getQuant() {
@@ -24,19 +36,17 @@ public class Product {
 	}
 
 	public void setQuant(int quant) {
-		Quant = quant;
-	}
-
-	private double Valor;
-	private int Quant;
-	
-	public Product() {
-		
-	};
-	
-	public Product(String nome,double valor, int quant) {
-		this.NomeProd = nome;
-		this.Valor = valor;
 		this.Quant = quant;
 	}
+	
+	public String toString() {
+		return "Produto :"
+				+NomeProd+
+				", Valor do produto :"
+				+Valor+
+				", Quantidade :"
+				+Quant;
+	}
+	
+	
 }
