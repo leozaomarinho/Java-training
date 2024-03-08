@@ -10,12 +10,15 @@ public class VetorObjeto {
 		Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
 
+		// variables
+		double sum = 0;
+
 		System.out.println("Digite Quantos produtos deseja cadastrar: ");
 		int n = input.nextInt();
 
 		Product[] prod = new Product[n];
 
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 
 			System.out.println("Digite o valor do produto: " + i);
 			System.out.print("Digite o nome do produto: ");
@@ -28,10 +31,12 @@ public class VetorObjeto {
 
 		}
 		
-		for(int i=1;i<=n;i++) {
+		for (int i = 0; i < n; i++) {
 			prod.toString();
+			sum = sum+(prod[i].getValor()*prod[i].getQuant());
 		}
-
+		
+		System.out.printf("Valor total dos produtos: %.2f",sum);
 		input.close();
 	}
 
