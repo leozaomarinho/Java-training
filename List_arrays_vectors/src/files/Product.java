@@ -40,11 +40,11 @@ public class Product {
 	}
 	
 	public String toString() {
-		return "Produto :"
+		return "Produto : "
 				+NomeProd+
-				", Valor do produto :"
+				", Valor do produto : "
 				+Valor+
-				", Quantidade :"
+				", Quantidade : "
 				+Quant;
 	}
 	

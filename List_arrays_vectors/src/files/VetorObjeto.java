@@ -20,7 +20,7 @@ public class VetorObjeto {
 
 		for (int i = 0; i < n; i++) {
 
-			System.out.println("Digite o valor do produto: " + i);
+			System.out.println("Digite o valor do produto: " + (i+1));
 			System.out.print("Digite o nome do produto: ");
 			String name = input.next();
 			System.out.print("Digite o valor do produto: ");
@@ -34,6 +34,10 @@ public class VetorObjeto {
 		for (int i = 0; i < n; i++) {
 			prod.toString();
 			sum = sum+(prod[i].getValor()*prod[i].getQuant());
+		}
+		System.out.println("---- Produtos ----");
+		for(Product produ : prod){
+			System.out.println(produ);
 		}
 		
 		System.out.printf("Valor total dos produtos: %.2f",sum);
