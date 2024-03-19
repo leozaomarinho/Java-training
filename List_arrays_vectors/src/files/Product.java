@@ -11,9 +11,9 @@ public class Product {
 	};
 	
 	public Product(String nome,double valor, int quant) {
-		this.NomeProd = nome;
-		this.Valor = valor;
-		this.Quant = quant;
+		NomeProd = nome;
+		Valor = valor;
+		Quant = quant;
 	}
 	public String getNomeProd() {
 		return NomeProd;

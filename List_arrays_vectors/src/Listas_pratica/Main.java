@@ -10,6 +10,8 @@ public class Main {
 			
 		List<Product> lista = new ArrayList<>();
 		
+		Product product = new Product();
+		
 		System.out.println("Digite o nome do produto: ");
 		String nome = input.next();
 		
@@ -18,8 +20,9 @@ public class Main {
 		
 		System.out.println("Digite o valor do produto: ");
 		double preco = input.nextDouble();
+
 		
-		lista.add(new Product(nome,quant,preco));
+		lista.add(product);
 		
 		
 		input.close();
