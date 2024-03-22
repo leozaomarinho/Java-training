@@ -24,6 +24,19 @@ public class Using_List {
 			System.out.println(name); 
 		 }
 		 
+		 System.out.println("Digite o nome a ser removido: ");
+		 String nameRem = input.next();
+		 for(int i = 0 ;i<nomes.size();i++) {
+			 
+			 
+			 if(nomes==nameRem) {
+				 System.out.println("Voce removeu o nome: "+nameRem);
+			 }
+			 else {
+				 System.out.println("O nome "+nameRem+" não existe na lista");
+			 }
+		 }
+		 
 		input.close();
 	}
 
