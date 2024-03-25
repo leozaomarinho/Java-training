@@ -6,7 +6,7 @@ public class Product {
 	private int Quant;
 	private double Preco;
 	
-	private Product(String nomeProd, int quant, double preco) {
+	public Product(String nomeProd, int quant, double preco) {
 		
 		this.NomeProd = nomeProd;
 		this.Quant = quant;
@@ -31,4 +31,11 @@ public class Product {
 	public void setPreco(double preco) {
 		Preco = preco;
 	}
+
+	@Override
+	public String toString() {
+		return "Produto NomeProd : " + NomeProd + ", Quant : " + Quant + ", Preco : " + Preco + "";
+	}
+	
+	
 }

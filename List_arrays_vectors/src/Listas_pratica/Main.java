@@ -10,7 +10,7 @@ public class Main {
 			
 		List<Product> lista = new ArrayList<>();
 		
-		Product product = new Product();
+		
 		
 		System.out.println("Digite o nome do produto: ");
 		String nome = input.next();
@@ -20,9 +20,14 @@ public class Main {
 		
 		System.out.println("Digite o valor do produto: ");
 		double preco = input.nextDouble();
-
+		
+		Product product = new Product(nome,quant,preco);
 		
 		lista.add(product);
+		
+		for (Product list : lista ) {
+			System.out.println(list);
+		}
 		
 		
 		input.close();

@@ -29,7 +29,8 @@ public class Using_List {
 		 for(int i = 0 ;i<nomes.size();i++) {
 			 
 			 
-			 if(nomes==nameRem) {
+			 if(nomes.contains(nameRem)) {
+				 nomes.remove(nameRem);
 				 System.out.println("Voce removeu o nome: "+nameRem);
 			 }
 			 else {
