@@ -10,8 +10,6 @@ public class Main {
 			
 		List<Product> lista = new ArrayList<>();
 		
-		
-		
 		System.out.println("Digite o nome do produto: ");
 		String nome = input.next();
 		
