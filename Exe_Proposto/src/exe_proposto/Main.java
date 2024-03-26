@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Digite a quantidade de funcionarios que voce deseja cadastrar: ");
 		quantFunc = input.nextInt();
 
-		int[] funcionarios = new int[quantFunc];
+		Funcionarios[] funcionarios = new Funcionarios[quantFunc];
 
 		for (int i = 0; i < quantFunc; i++) {
 			System.out.println("== Cadastro de funcionario ==");
