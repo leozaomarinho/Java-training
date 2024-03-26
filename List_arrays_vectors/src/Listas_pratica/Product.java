@@ -6,6 +6,10 @@ public class Product {
 	private int Quant;
 	private double Preco;
 	
+	public Product() {
+		
+	};
+	
 	public Product(String nomeProd, int quant, double preco) {
 		
 		this.NomeProd = nomeProd;
