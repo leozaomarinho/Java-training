@@ -32,7 +32,12 @@ public class Main {
 			
 			funcionarios[i] = funcionario;
 		}
-
+		System.out.println(" === Produtos cadastrados ===");
+		for(Funcionarios func: funcionarios) {
+			System.out.println(func);
+		}
+		System.exit(0);
 		input.close();
+		
 	}
 }
