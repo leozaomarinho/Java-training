@@ -14,11 +14,12 @@ public class java {
 		numLinhas = input.nextInt();
 		System.out.println("Digite a quantidade de colunas: ");
 		numCol = input.nextInt();
-		
+		int[][] mat = new int[numLinhas][numCol];
 		for(int l =1;l<=numLinhas;l++) {
 			System.out.println();
 			System.out.println("Linha : "+l);
 			for(int c = 1;c<=numCol;c++) {
+				mat[l][c] = c;
 				System.out.print(" Coluna : "+c);
 			}
 		}
