@@ -19,11 +19,12 @@ public class java {
 			System.out.println();
 			System.out.println("Linha : "+l);
 			for(int c = 1;c<=numCol;c++) {
-				mat[l][c] = c;
-				System.out.print(" Coluna : "+c);
+				mat[l][c] = c+1;
+				System.out.print(" Coluna : "+(c+1));
 			}
 		}
 		
+		input.close();
 	}
 
 }
