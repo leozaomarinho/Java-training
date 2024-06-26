@@ -41,5 +41,6 @@ public class Estoque {
         for (Produto produto : produtos) {
             System.out.println(produto);
         }
+        System.out.println();
     }
 }
