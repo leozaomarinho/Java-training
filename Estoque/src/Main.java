@@ -20,6 +20,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
+                	System.out.println(" --- Cadastrar Produto --- ");
                     System.out.print("Nome do produto: ");
                     String nome = scanner.nextLine();
                     System.out.print("Preço do produto: ");
@@ -31,12 +32,14 @@ public class Main {
                     break;
 
                 case 2:
+                	System.out.println(" --- Remover Produto --- ");
                     System.out.print("Nome do produto a remover: ");
                     String nomeRemover = scanner.nextLine();
                     estoque.removerProduto(nomeRemover);
                     break;
 
                 case 3:
+                	System.out.println(" --- Buscar Produto --- ");
                     System.out.print("Nome do produto a buscar: ");
                     String nomeBuscar = scanner.nextLine();
                     Produto produtoEncontrado = estoque.buscarProduto(nomeBuscar);
@@ -46,11 +49,12 @@ public class Main {
                     break;
 
                 case 4:
+                	System.out.println(" --- Lista de Produtos --- ");
                     estoque.listarProdutos();
                     break;
 
                 case 5:
-                    System.out.println("Saindo...");
+                    System.out.println("Você escolheu sair!");
                     scanner.close();
                     System.exit(0);
                     break;
