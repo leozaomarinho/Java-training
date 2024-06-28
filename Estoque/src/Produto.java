@@ -4,12 +4,15 @@ public class Produto {
 	private String nome;
 	private double preco;
 	private int quantidade;
+    private Disponibilidade disponibilidade;
+
 	
 	public Produto(String nome, double preco, int quantidade) {
 		super();
 		this.setNome(nome);
 		this.setPreco(preco);
 		this.setQuantidade(quantidade);
+		this.atualizarDisponibilidade();
 	}
 
 	public double getPreco() {
@@ -35,6 +38,17 @@ public class Produto {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+	public Disponibilidade getDisponibilidade() {
+        return disponibilidade;
+    }
+
+    private void atualizarDisponibilidade() {
+        if (this.quantidade > 0) {
+            this.disponibilidade = Disponibilidade.DISPONIVEL;
+        } else {
+            this.disponibilidade = Disponibilidade.ESGOTADO;
+        }
+    }
 
 	@Override
 	public String toString() {
